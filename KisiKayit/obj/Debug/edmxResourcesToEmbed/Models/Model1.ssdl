@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KisiKayitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Kisi">
+    <Key>
+      <PropertyRef Name="KisiID" />
+    </Key>
+    <Property Name="KisiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KisiAdi" Type="varchar" MaxLength="50" />
+    <Property Name="KisiSoyadi" Type="varchar" MaxLength="50" />
+    <Property Name="KisiEmail" Type="varchar" MaxLength="50" />
+    <Property Name="KisiFotograf" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="KisiKayitModelStoreContainer">
+    <EntitySet Name="tbl_Kisi" EntityType="Self.tbl_Kisi" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

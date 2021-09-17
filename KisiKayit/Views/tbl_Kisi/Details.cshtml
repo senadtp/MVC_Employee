@@ -1,0 +1,51 @@
+﻿@model KisiKayit.Models.tbl_Kisi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_Kisi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KisiAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KisiAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KisiSoyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KisiSoyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KisiEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KisiEmail)
+        </dd>
+
+        <dt>
+            <img src="../../Images/KisiFotograf/@Model.KisiFotograf" width="100px" height="100px" />
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KisiFotograf)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KisiID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
